@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import plotly.graph_objects as go
 
-API_KEY = "77ac8f04f9c013a12e8c5138cedc3741e4720ca72187fcc8"
+API_KEY = st.secrets["API_KEY"]
 BASE_URL = "https://api.jobindsats.dk/v2"
 
 # ── Tabelkonfiguration ────────────────────────────────────────────────────────
@@ -241,6 +241,12 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] div { color: white; }
 </style>
 """, unsafe_allow_html=True)
+
+# ── Adgangskode ───────────────────────────────────────────────────────────────
+adgangskode = st.sidebar.text_input("Adgangskode", type="password")
+if adgangskode != st.secrets["PASSWORD"]:
+    st.sidebar.warning("Indtast adgangskode for at fortsætte")
+    st.stop()
 
 # ── Sidebar ────────────────────────────────────────────────────────────────────
 
