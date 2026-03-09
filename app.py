@@ -238,12 +238,8 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .section-header { font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#6C757D; border-bottom:1px solid #E9ECEF; padding-bottom:6px; margin:16px 0 10px 0; }
 [data-testid="stSidebar"] { background: #1B3A5C !important; }
 [data-testid="stSidebar"] label { color: #A8C4DC !important; font-size:0.72rem !important; font-weight:600 !important; text-transform:uppercase; }
-[data-testid="stSidebar"] p { color: white !important; }
-[data-testid="stSidebar"] .stMarkdown p { color: white !important; }
-[data-testid="stSidebar"] .stSelectbox div { color: #1A1A2E !important; }
-[data-testid="stSidebar"] .stSlider span { color: white !important; }
+[data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] div { color: white !important; }
 [data-testid="stSidebar"] small { color: #A8C4DC !important; }
-[data-testid="stSidebar"] .stTextInput input { color: #1A1A2E !important; }
 </style>
 """, unsafe_allow_html=True)
 
